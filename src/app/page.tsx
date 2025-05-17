@@ -16,7 +16,10 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section id="hero" className="w-full flex justify-center mt-12">
+      <section
+        id="hero"
+        className="w-full flex justify-center mt-12 animate-fadeIn"
+      >
         <Card className="w-full max-w-2xl p-8 shadow-xl border-2 border-primary/20 bg-card/80">
           <div className="flex flex-col items-center gap-6">
             <Avatar className="w-28 h-28 border-4 border-primary/30 shadow-md">
@@ -69,7 +72,7 @@ export default function Home() {
       {/* Personal Statement Section */}
       <section
         id="personal-statement"
-        className="w-full flex justify-center mt-12"
+        className="w-full flex justify-center mt-12 animate-fadeIn"
       >
         <Card className="w-full max-w-2xl p-8 shadow-lg border border-primary/10 bg-card/90">
           <h2 className="text-2xl font-semibold mb-4 text-center">
@@ -97,7 +100,7 @@ export default function Home() {
       {/* Work Experience Section */}
       <section
         id="work-experience"
-        className="w-full flex flex-col items-center mt-12"
+        className="w-full flex flex-col items-center mt-12 animate-fadeIn"
       >
         <h2 className="text-2xl font-semibold mb-4 text-center">
           Work Experience
@@ -127,7 +130,7 @@ export default function Home() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="w-full flex flex-col items-center mt-12"
+        className="w-full flex flex-col items-center mt-12 animate-fadeIn"
       >
         <h2 className="text-2xl font-semibold mb-4 text-center">Projects</h2>
         <ProjectCard
@@ -151,7 +154,7 @@ export default function Home() {
       {/* Certifications Section */}
       <section
         id="certifications"
-        className="w-full flex flex-col items-center mt-12"
+        className="w-full flex flex-col items-center mt-12 animate-fadeIn"
       >
         <h2 className="text-2xl font-semibold mb-4 text-center">
           Certifications
@@ -190,7 +193,7 @@ export default function Home() {
       {/* Education Section */}
       <section
         id="education"
-        className="w-full flex flex-col items-center mt-12"
+        className="w-full flex flex-col items-center mt-12 animate-fadeIn"
       >
         <h2 className="text-2xl font-semibold mb-4 text-center">Education</h2>
         <EducationCard
@@ -232,7 +235,7 @@ export default function Home() {
       {/* Teaching Experience Section */}
       <section
         id="teaching-experience"
-        className="w-full flex flex-col items-center mt-12"
+        className="w-full flex flex-col items-center mt-12 animate-fadeIn"
       >
         <h2 className="text-2xl font-semibold mb-4 text-center">
           Teaching Experience
@@ -251,7 +254,7 @@ export default function Home() {
       {/* Other Section */}
       <section
         id="other"
-        className="w-full flex flex-col items-center mt-12 mb-12"
+        className="w-full flex flex-col items-center mt-12 mb-12 animate-fadeIn"
       >
         <h2 className="text-2xl font-semibold mb-4 text-center">Other</h2>
         <OtherInfoCard
@@ -265,6 +268,30 @@ export default function Home() {
           }}
         />
       </section>
+
+      {/* Footer */}
+      <footer className="w-full border-t border-border bg-background/80 py-6 flex flex-col items-center text-sm text-muted-foreground mt-8">
+        <div className="max-w-2xl w-full flex flex-col md:flex-row justify-between items-center px-4 gap-2">
+          <span>
+            &copy; {new Date().getFullYear()} Reza Fakhr Hosseini. All rights
+            reserved.
+          </span>
+          <div className="flex gap-4 mt-2 md:mt-0">
+            <a href="#hero" className="hover:text-primary transition-colors">
+              Home
+            </a>
+            <a
+              href="#projects"
+              className="hover:text-primary transition-colors"
+            >
+              Projects
+            </a>
+            <a href="#contact" className="hover:text-primary transition-colors">
+              Contact
+            </a>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

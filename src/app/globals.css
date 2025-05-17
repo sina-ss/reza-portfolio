@@ -76,6 +76,7 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --accent-gold: #ffd700;
 }
 
 .dark {
@@ -135,7 +136,7 @@
   }
 
   section {
-    @apply my-12;
+    @apply my-16 md:my-24;
   }
 }
 
@@ -143,7 +144,18 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .gold-accent {
+    color: var(--accent-gold);
   }
 }
