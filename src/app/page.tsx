@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Mail, Linkedin, Globe, Phone } from "lucide-react";
+import { Mail, Linkedin, Globe, Phone, Download } from "lucide-react";
 import { WorkExperience } from "@/components/WorkExperience";
 import { ProjectCard } from "@/components/ProjectCard";
 import { CertificationCard } from "@/components/CertificationCard";
@@ -18,24 +18,26 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="hero"
-        className="w-full flex justify-center mt-12 animate-fadeIn"
+        className="w-full flex justify-center mt-8 md:mt-12 animate-fadeIn px-2"
       >
-        <Card className="w-full max-w-2xl p-8 shadow-xl border-2 border-primary/20 bg-card/80">
-          <div className="flex flex-col items-center gap-6">
-            <Avatar className="w-28 h-28 border-4 border-primary/30 shadow-md">
+        <Card className="w-full max-w-2xl p-4 md:p-8 shadow-xl border-2 border-primary/20 bg-card/80">
+          <div className="flex flex-col items-center gap-4 md:gap-6">
+            <Avatar className="w-24 h-24 md:w-28 md:h-28 border-4 border-primary/30 shadow-md">
               {/* Placeholder for profile photo */}
-              <AvatarFallback className="text-4xl">RFH</AvatarFallback>
+              <AvatarFallback className="text-3xl md:text-4xl">
+                RFH
+              </AvatarFallback>
             </Avatar>
-            <div className="flex flex-col items-center gap-2">
-              <h1 className="text-3xl md:text-4xl font-bold text-center">
+            <div className="flex flex-col items-center gap-1 md:gap-2">
+              <h1 className="text-2xl md:text-4xl font-bold text-center">
                 Reza Fakhr Hosseini
               </h1>
-              <Badge className="text-base px-4 py-1 bg-primary/90">
+              <Badge className="text-sm md:text-base px-3 md:px-4 py-1 bg-primary/90">
                 Finance Expert & Financial Analyst
               </Badge>
             </div>
             <Separator className="my-2" />
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-2 md:gap-4 justify-center">
               <Button asChild variant="outline" size="sm" className="gap-2">
                 <a
                   href="https://www.linkedin.com/in/rfhosseini"
@@ -65,6 +67,16 @@ export default function Home() {
                 </a>
               </Button>
             </div>
+            <Button
+              asChild
+              variant="default"
+              size="lg"
+              className="mt-2 md:mt-4 gap-2 gold-accent w-full md:w-auto"
+            >
+              <a href="/resume.pdf" download>
+                <Download className="w-5 h-5" /> Download Resume
+              </a>
+            </Button>
           </div>
         </Card>
       </section>
@@ -72,14 +84,14 @@ export default function Home() {
       {/* Personal Statement Section */}
       <section
         id="personal-statement"
-        className="w-full flex justify-center mt-12 animate-fadeIn"
+        className="w-full flex justify-center mt-8 md:mt-12 animate-fadeIn px-2"
       >
-        <Card className="w-full max-w-2xl p-8 shadow-lg border border-primary/10 bg-card/90">
-          <h2 className="text-2xl font-semibold mb-4 text-center">
+        <Card className="w-full max-w-2xl p-4 md:p-8 shadow-lg border border-primary/10 bg-card/90">
+          <h2 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-center">
             Personal Statement
           </h2>
-          <Separator className="mb-4" />
-          <p className="text-lg leading-relaxed text-muted-foreground text-center">
+          <Separator className="mb-3 md:mb-4" />
+          <p className="text-base md:text-lg leading-relaxed text-muted-foreground text-center">
             As a Financial Analyst, I have completed financial modeling for over
             50 companies across three major sectors in my country, including
             refineries. Over the past four years, I dedicated myself to this
@@ -100,9 +112,9 @@ export default function Home() {
       {/* Work Experience Section */}
       <section
         id="work-experience"
-        className="w-full flex flex-col items-center mt-12 animate-fadeIn"
+        className="w-full flex flex-col items-center mt-8 md:mt-12 animate-fadeIn px-2"
       >
-        <h2 className="text-2xl font-semibold mb-4 text-center">
+        <h2 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-center">
           Work Experience
         </h2>
         <WorkExperience
@@ -130,9 +142,11 @@ export default function Home() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="w-full flex flex-col items-center mt-12 animate-fadeIn"
+        className="w-full flex flex-col items-center mt-8 md:mt-12 animate-fadeIn px-2"
       >
-        <h2 className="text-2xl font-semibold mb-4 text-center">Projects</h2>
+        <h2 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-center">
+          Projects
+        </h2>
         <ProjectCard
           title="Automated Excel Dashboard For Communications' Operators"
           description="Developed an automated Excel dashboard to streamline and visualize key metrics for communications operators."
@@ -154,9 +168,9 @@ export default function Home() {
       {/* Certifications Section */}
       <section
         id="certifications"
-        className="w-full flex flex-col items-center mt-12 animate-fadeIn"
+        className="w-full flex flex-col items-center mt-8 md:mt-12 animate-fadeIn px-2"
       >
-        <h2 className="text-2xl font-semibold mb-4 text-center">
+        <h2 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-center">
           Certifications
         </h2>
         <CertificationCard
@@ -198,9 +212,11 @@ export default function Home() {
       {/* Education Section */}
       <section
         id="education"
-        className="w-full flex flex-col items-center mt-12 animate-fadeIn"
+        className="w-full flex flex-col items-center mt-8 md:mt-12 animate-fadeIn px-2"
       >
-        <h2 className="text-2xl font-semibold mb-4 text-center">Education</h2>
+        <h2 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-center">
+          Education
+        </h2>
         <EducationCard
           degree="M.Sc."
           field="Finance"
@@ -235,14 +251,16 @@ export default function Home() {
         />
       </section>
 
-      <SkillsSection />
+      <div className="px-2 w-full flex justify-center">
+        <SkillsSection />
+      </div>
 
       {/* Teaching Experience Section */}
       <section
         id="teaching-experience"
-        className="w-full flex flex-col items-center mt-12 animate-fadeIn"
+        className="w-full flex flex-col items-center mt-8 md:mt-12 animate-fadeIn px-2"
       >
-        <h2 className="text-2xl font-semibold mb-4 text-center">
+        <h2 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-center">
           Teaching Experience
         </h2>
         <TeachingExperienceCard
@@ -259,9 +277,11 @@ export default function Home() {
       {/* Other Section */}
       <section
         id="other"
-        className="w-full flex flex-col items-center mt-12 mb-12 animate-fadeIn"
+        className="w-full flex flex-col items-center mt-8 md:mt-12 mb-8 md:mb-12 animate-fadeIn px-2"
       >
-        <h2 className="text-2xl font-semibold mb-4 text-center">Other</h2>
+        <h2 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-center">
+          Other
+        </h2>
         <OtherInfoCard
           piano={true}
           ielts={{
@@ -277,17 +297,22 @@ export default function Home() {
       {/* Contact Section */}
       <section
         id="contact"
-        className="w-full flex flex-col items-center mt-12 mb-12 animate-fadeIn"
+        className="w-full flex flex-col items-center mt-8 md:mt-12 mb-8 md:mb-12 animate-fadeIn px-2"
       >
-        <Card className="w-full max-w-2xl p-8 shadow-lg border border-primary/10 bg-card/95 flex flex-col items-center">
-          <h2 className="text-2xl font-semibold mb-4 text-center gold-accent">
+        <Card className="w-full max-w-2xl p-4 md:p-8 shadow-lg border border-primary/10 bg-card/95 flex flex-col items-center">
+          <h2 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-center gold-accent">
             Contact
           </h2>
-          <p className="mb-6 text-center text-muted-foreground text-lg">
+          <p className="mb-4 md:mb-6 text-center text-muted-foreground text-base md:text-lg">
             Interested in working together or have a question? Feel free to
             reach out!
           </p>
-          <Button asChild size="lg" variant="default" className="gap-2">
+          <Button
+            asChild
+            size="lg"
+            variant="default"
+            className="gap-2 w-full md:w-auto"
+          >
             <a href="mailto:rzafh79@gmail.com">
               <Mail className="w-5 h-5" /> Email Me
             </a>
@@ -296,13 +321,13 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="w-full border-t border-border bg-background/80 py-6 flex flex-col items-center text-sm text-muted-foreground mt-8">
-        <div className="max-w-2xl w-full flex flex-col md:flex-row justify-between items-center px-4 gap-2">
+      <footer className="w-full border-t border-border bg-background/80 py-6 flex flex-col items-center text-xs md:text-sm text-muted-foreground mt-8 px-2">
+        <div className="max-w-2xl w-full flex flex-col md:flex-row justify-between items-center px-2 md:px-4 gap-2">
           <span>
             &copy; {new Date().getFullYear()} Reza Fakhr Hosseini. All rights
             reserved.
           </span>
-          <div className="flex gap-4 mt-2 md:mt-0">
+          <div className="flex gap-2 md:gap-4 mt-2 md:mt-0">
             <a href="#hero" className="hover:text-primary transition-colors">
               Home
             </a>
