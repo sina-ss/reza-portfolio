@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 const sections = [
   { id: "hero", label: "Home" },
@@ -43,24 +45,39 @@ export function TopNav() {
   return (
     <nav className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur border-b border-border shadow-sm">
       <div className="max-w-4xl mx-auto flex items-center justify-between px-4 py-2">
-        <ul className="flex gap-2 md:gap-4">
-          {sections.map((section) => (
-            <li key={section.id}>
-              <button
-                className={cn(
-                  "px-2 md:px-3 py-1 rounded transition-colors text-sm font-medium hover:bg-primary/10 focus:outline-none",
-                  active === section.id
-                    ? "text-primary bg-primary/10 font-bold"
-                    : "text-muted-foreground"
-                )}
-                onClick={() => handleClick(section.id)}
-                aria-current={active === section.id ? "page" : undefined}
-              >
-                {section.label}
-              </button>
-            </li>
-          ))}
-        </ul>
+        <span className="font-bold text-lg tracking-tight text-primary">
+          Reza Fakhr Hosseini
+        </span>
+        <div className="flex items-center gap-2 md:gap-4">
+          <ul className="flex gap-2 md:gap-4">
+            {sections.map((section) => (
+              <li key={section.id}>
+                <button
+                  className={cn(
+                    "px-2 md:px-3 py-1 rounded transition-colors text-sm font-medium hover:bg-primary/10 focus:outline-none",
+                    active === section.id
+                      ? "text-primary bg-primary/10 font-bold"
+                      : "text-muted-foreground"
+                  )}
+                  onClick={() => handleClick(section.id)}
+                  aria-current={active === section.id ? "page" : undefined}
+                >
+                  {section.label}
+                </button>
+              </li>
+            ))}
+          </ul>
+          <Button
+            asChild
+            variant="outline"
+            size="sm"
+            className="gap-2 hidden md:flex"
+          >
+            <a href="/resume.pdf" download>
+              <Download className="w-4 h-4" /> Resume
+            </a>
+          </Button>
+        </div>
       </div>
     </nav>
   );

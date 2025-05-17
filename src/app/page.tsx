@@ -164,29 +164,34 @@ export default function Home() {
           issuer="Bloomberg"
           date="Issued: May 2025"
           credentialId="srbcSSX6bmAxvXgaMj4mWADV"
+          badgeClassName="gold-accent"
         />
         <CertificationCard
           title="Bloomberg Spreadsheet Analysis"
           issuer="Bloomberg"
           date="Issued: May 2025"
           credentialId="rpu4HEP4p2bp9QYBm1cBRUFS"
+          badgeClassName="gold-accent"
         />
         <CertificationCard
           title="Environmental Social Governance"
           issuer="Bloomberg"
           date="Issued: May 2025"
           credentialId="qqqz3Ua7cBbc9o1CcrSs9ntN"
+          badgeClassName="gold-accent"
         />
         <CertificationCard
           title="Finance Accelerator"
           issuer="Morgan Stanley and UBS"
           date="Issued: Oct 2024"
           credentialId="f7d3907c-2efc-47b8-b358-1b8a60b27f6e"
+          badgeClassName="gold-accent"
         />
         <CertificationCard
           title="CFA level 1 Candidate"
           issuer="CFA Institute"
           date="Scheduled in: Aug 2025 (due to take)"
+          badgeClassName="gold-accent"
         />
       </section>
 
@@ -267,6 +272,27 @@ export default function Home() {
             writing: "6.5",
           }}
         />
+      </section>
+
+      {/* Contact Section */}
+      <section
+        id="contact"
+        className="w-full flex flex-col items-center mt-12 mb-12 animate-fadeIn"
+      >
+        <Card className="w-full max-w-2xl p-8 shadow-lg border border-primary/10 bg-card/95 flex flex-col items-center">
+          <h2 className="text-2xl font-semibold mb-4 text-center gold-accent">
+            Contact
+          </h2>
+          <p className="mb-6 text-center text-muted-foreground text-lg">
+            Interested in working together or have a question? Feel free to
+            reach out!
+          </p>
+          <Button asChild size="lg" variant="default" className="gap-2">
+            <a href="mailto:rzafh79@gmail.com">
+              <Mail className="w-5 h-5" /> Email Me
+            </a>
+          </Button>
+        </Card>
       </section>
 
       {/* Footer */}
