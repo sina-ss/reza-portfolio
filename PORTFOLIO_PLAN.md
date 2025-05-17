@@ -42,21 +42,24 @@ Create a stunning, professional portfolio website for Reza Fakhr Hosseini, a fin
    - Highlighted projects with brief descriptions
    - _Reusable ProjectCard component created and integrated, using shadcn/ui Card, Badge, and Separator for a clean, professional project display. Populated with Reza's key projects._
 
-5. **Certifications**
+5. **Certifications** ✅ _Completed_
 
    - List with issuer, date, and credential ID
+   - _Reusable CertificationCard component created and integrated, using shadcn/ui Card, Badge, and Separator for a clean, professional certification display. Populated with Reza's certifications._
 
-6. **Education**
+6. **Education** ✅ _Completed_
 
    - Timeline or cards for each degree
    - GPA and rankings
+   - _Reusable EducationCard component created and integrated, using shadcn/ui Card, Badge, and Separator for a clean, professional education display. Populated with Reza's education history._
 
-7. **Skills**
+7. **Skills** ✅ _Completed_
 
    - Programming
    - Software
    - Investment Analysis
    - Soft Skills
+   - _Reusable SkillsSection component created and integrated, grouping skills by category and displaying each as a badge for clarity and visual appeal._
 
 8. **Teaching Experience**
 

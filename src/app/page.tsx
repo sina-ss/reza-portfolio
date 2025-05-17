@@ -6,6 +6,11 @@ import { Separator } from "@/components/ui/separator";
 import { Mail, Linkedin, Globe, Phone } from "lucide-react";
 import { WorkExperience } from "@/components/WorkExperience";
 import { ProjectCard } from "@/components/ProjectCard";
+import { CertificationCard } from "@/components/CertificationCard";
+import { EducationCard } from "@/components/EducationCard";
+import { SkillsSection } from "@/components/SkillsSection";
+import { TeachingExperienceCard } from "@/components/TeachingExperienceCard";
+import { OtherInfoCard } from "@/components/OtherInfoCard";
 
 export default function Home() {
   return (
@@ -140,6 +145,124 @@ export default function Home() {
         <ProjectCard
           title="Specific Financial Evaluation of 'Barekat Financial Group'"
           description="Conducted a comprehensive financial evaluation for Barekat Financial Group, the largest financial group in Iran's pharmaceutical sector."
+        />
+      </section>
+
+      {/* Certifications Section */}
+      <section
+        id="certifications"
+        className="w-full flex flex-col items-center mt-12"
+      >
+        <h2 className="text-2xl font-semibold mb-4 text-center">
+          Certifications
+        </h2>
+        <CertificationCard
+          title="Bloomberg Market Concepts"
+          issuer="Bloomberg"
+          date="Issued: May 2025"
+          credentialId="srbcSSX6bmAxvXgaMj4mWADV"
+        />
+        <CertificationCard
+          title="Bloomberg Spreadsheet Analysis"
+          issuer="Bloomberg"
+          date="Issued: May 2025"
+          credentialId="rpu4HEP4p2bp9QYBm1cBRUFS"
+        />
+        <CertificationCard
+          title="Environmental Social Governance"
+          issuer="Bloomberg"
+          date="Issued: May 2025"
+          credentialId="qqqz3Ua7cBbc9o1CcrSs9ntN"
+        />
+        <CertificationCard
+          title="Finance Accelerator"
+          issuer="Morgan Stanley and UBS"
+          date="Issued: Oct 2024"
+          credentialId="f7d3907c-2efc-47b8-b358-1b8a60b27f6e"
+        />
+        <CertificationCard
+          title="CFA level 1 Candidate"
+          issuer="CFA Institute"
+          date="Scheduled in: Aug 2025 (due to take)"
+        />
+      </section>
+
+      {/* Education Section */}
+      <section
+        id="education"
+        className="w-full flex flex-col items-center mt-12"
+      >
+        <h2 className="text-2xl font-semibold mb-4 text-center">Education</h2>
+        <EducationCard
+          degree="M.Sc."
+          field="Finance"
+          institution="Manchester Metropolitan, Manchester, UK"
+          date="2024 – 2025 (Graduation: September 2025)"
+          details={["Rank 51+ in World, QS Universities"]}
+        />
+        <EducationCard
+          degree="B.Sc."
+          field="Biomedical Engineering (Bioelectric)"
+          institution="Amirkabir University of Technology, Tehran, Iran"
+          date="2019 – 2023"
+          gpa="3.45 (16.43 / 20)"
+          details={[
+            "Rank 1 BioElectrics Department in Iran, Ministry of Science",
+            "GPA of last 60 units: 3.71 (17.138 / 20)",
+          ]}
+        />
+        <EducationCard
+          degree="Economy Minor Course"
+          institution="Management Department, Amirkabir University of Technology, Tehran, Iran"
+          date="2021-2022"
+          gpa="3.8 (17.82 / 20)"
+        />
+        <EducationCard
+          degree="High School Diploma"
+          field="Mathematics"
+          institution="Atomic Energy High School, Tehran, Iran"
+          date="2016 – 2019"
+          gpa="19.52 / 20"
+          details={["Rank 1 High School in Iran, Ministry of Science"]}
+        />
+      </section>
+
+      <SkillsSection />
+
+      {/* Teaching Experience Section */}
+      <section
+        id="teaching-experience"
+        className="w-full flex flex-col items-center mt-12"
+      >
+        <h2 className="text-2xl font-semibold mb-4 text-center">
+          Teaching Experience
+        </h2>
+        <TeachingExperienceCard
+          role="Teaching Assistant"
+          department="Department of Biomedical Engineering"
+          institution="Amirkabir University of Technology, Tehran, Iran"
+          course="Management and Entrepreneurship in Biomedical Engineering"
+          professor="Dr. Hamed Azarnoush"
+          duration="2 semesters"
+          date="2022 – 2023"
+        />
+      </section>
+
+      {/* Other Section */}
+      <section
+        id="other"
+        className="w-full flex flex-col items-center mt-12 mb-12"
+      >
+        <h2 className="text-2xl font-semibold mb-4 text-center">Other</h2>
+        <OtherInfoCard
+          piano={true}
+          ielts={{
+            overall: "7",
+            listening: "7.5",
+            reading: "7",
+            speaking: "7",
+            writing: "6.5",
+          }}
         />
       </section>
     </>
