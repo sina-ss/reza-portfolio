@@ -76,7 +76,6 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
-  --accent-gold: #ffd700;
 }
 
 .dark {
@@ -119,24 +118,7 @@
   }
 
   body {
-    @apply bg-background text-foreground min-h-screen font-sans;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-bold text-primary;
-  }
-
-  a {
-    @apply text-primary underline hover:text-accent transition-colors;
-  }
-
-  section {
-    @apply my-16 md:my-24;
+    @apply bg-background text-foreground;
   }
 }
 
@@ -152,10 +134,4 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-@layer utilities {
-  .gold-accent {
-    color: var(--accent-gold);
-  }
 }
