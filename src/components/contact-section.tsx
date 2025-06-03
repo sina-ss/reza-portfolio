@@ -15,6 +15,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Separator } from "@/components/ui/separator";
 import { Mail, Phone, Linkedin, Send, Globe } from "lucide-react";
+import Link from "next/link";
 
 export function ContactSection() {
   const [formState, setFormState] = useState({
@@ -84,12 +85,12 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm font-medium">Email</p>
-                  <a
+                  <Link
                     href="mailto:rzafh79@gmail.com"
                     className="text-sm text-muted-foreground hover:underline"
                   >
                     rzafh79@gmail.com
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -99,12 +100,12 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm font-medium">Phone</p>
-                  <a
+                  <Link
                     href="tel:+447351036696"
                     className="text-sm text-muted-foreground hover:underline"
                   >
                     +447351036696
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -114,14 +115,14 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm font-medium">LinkedIn</p>
-                  <a
-                    href="https://linkedin.com/in/"
+                  <Link
+                    href="https://linkedin.com/in/rfhosseini"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-muted-foreground hover:underline"
                   >
                     Profile
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -131,14 +132,14 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm font-medium">Website</p>
-                  <a
+                  <Link
                     href="https://rfhosseini.me"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-muted-foreground hover:underline"
                   >
                     rfhosseini.me
-                  </a>
+                  </Link>
                 </div>
               </div>
             </CardContent>

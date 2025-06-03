@@ -1,16 +1,13 @@
 "use client";
-
 import * as React from "react";
 import Link from "next/link";
 import { ModeToggle } from "./mode-toggle";
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
@@ -30,7 +27,6 @@ export function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -48,21 +44,21 @@ export function Navbar() {
         <Link href="/" className="text-xl font-bold tracking-tight">
           Reza Fakhr Hosseini
         </Link>
-
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
             {navLinks.map((link) => (
               <NavigationMenuItem key={link.href}>
-                <Link href={link.href} passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    {link.label}
-                  </NavigationMenuLink>
-                </Link>
+                {/* Use NavigationMenuLink directly with the href */}
+                <NavigationMenuLink
+                  className={navigationMenuTriggerStyle()}
+                  href={link.href}
+                >
+                  {link.label}
+                </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
         </NavigationMenu>
-
         <div className="flex items-center gap-4">
           <ModeToggle />
           <button className="md:hidden">

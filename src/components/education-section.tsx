@@ -216,20 +216,20 @@ export function EducationSection() {
                       <div className="text-2xl font-bold text-primary">7.0</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-xl font-bold">Listening</div>
-                      <div className="text-2xl font-bold text-primary">7.5</div>
+                      <div className="text-base font-bold">Listening</div>
+                      <div className="text-lg font-bold text-primary">7.5</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-xl font-bold">Reading</div>
-                      <div className="text-2xl font-bold text-primary">7.0</div>
+                      <div className="text-base font-bold">Reading</div>
+                      <div className="text-lg font-bold text-primary">7.0</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-xl font-bold">Speaking</div>
-                      <div className="text-2xl font-bold text-primary">7.0</div>
+                      <div className="text-base font-bold">Speaking</div>
+                      <div className="text-lg font-bold text-primary">7.0</div>
                     </div>
                     <div className="text-center md:col-span-4">
-                      <div className="text-xl font-bold">Writing</div>
-                      <div className="text-2xl font-bold text-primary">6.5</div>
+                      <div className="text-base font-bold">Writing</div>
+                      <div className="text-lg font-bold text-primary">6.5</div>
                     </div>
                   </div>
                 </CardContent>
