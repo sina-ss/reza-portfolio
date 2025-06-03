@@ -61,7 +61,7 @@ export default function HeroSection() {
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground"
               >
                 Hi, I&apos;m{" "}
-                <span className="text-primary bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
                   Reza
                 </span>
               </motion.h1>
