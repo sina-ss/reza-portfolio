@@ -148,7 +148,7 @@ export function ContactSection() {
             <CardHeader>
               <CardTitle>Send a Message</CardTitle>
               <CardDescription>
-                Fill out the form below and I'll get back to you as soon as
+                Fill out the form below and I&apos;ll get back to you as soon as
                 possible.
               </CardDescription>
             </CardHeader>
@@ -192,7 +192,7 @@ export function ContactSection() {
 
                 {isSuccess && (
                   <div className="bg-green-500/10 text-green-500 p-3 rounded-md text-sm">
-                    Message sent successfully! I'll get back to you soon.
+                    Message sent successfully! I&apos;ll get back to you soon.
                   </div>
                 )}
 

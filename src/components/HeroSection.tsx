@@ -2,14 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Linkedin,
-  ExternalLink,
-  Download,
-} from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, ExternalLink } from "lucide-react";
 import { personalData } from "@/lib/data";
 import { motion } from "framer-motion";
 
@@ -67,7 +60,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground"
               >
-                Hi, I'm{" "}
+                Hi, I&apos;m{" "}
                 <span className="text-primary bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
                   Reza
                 </span>

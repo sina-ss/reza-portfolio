@@ -61,7 +61,7 @@ export default function ContactSection() {
 
       setSubmitStatus("success");
       reset();
-    } catch (error) {
+    } catch {
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -121,7 +121,7 @@ export default function ContactSection() {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Ready to discuss opportunities or collaborate on financial projects?
-            I'd love to hear from you.
+            I&apos;d love to hear from you.
           </p>
         </motion.div>
 
@@ -234,7 +234,8 @@ export default function ContactSection() {
                     >
                       <CheckCircle className="h-5 w-5" />
                       <span>
-                        Message sent successfully! I'll get back to you soon.
+                        Message sent successfully! I&apos;ll get back to you
+                        soon.
                       </span>
                     </motion.div>
                   )}
@@ -269,8 +270,8 @@ export default function ContactSection() {
                 Contact Information
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Feel free to reach out through any of these channels. I'm always
-                open to discussing new opportunities, collaborations, or
+                Feel free to reach out through any of these channels. I&apos;m
+                always open to discussing new opportunities, collaborations, or
                 answering questions about financial analysis and modeling.
               </p>
             </div>

@@ -41,7 +41,9 @@ export default function SkillsSection() {
     }
   };
 
-  const getSkillBadgeVariant = (level: string) => {
+  const getSkillBadgeVariant = (
+    level: string
+  ): "default" | "secondary" | "outline" => {
     switch (level) {
       case "familiar":
         return "secondary";
@@ -119,7 +121,7 @@ export default function SkillsSection() {
                             {skill.name}
                           </span>
                           <Badge
-                            variant={getSkillBadgeVariant(skill.level) as any}
+                            variant={getSkillBadgeVariant(skill.level)}
                             className="text-xs"
                           >
                             {skill.level}

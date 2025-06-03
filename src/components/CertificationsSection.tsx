@@ -13,7 +13,6 @@ import {
   Clock,
   ExternalLink,
   Building,
-  Trophy,
   Target,
 } from "lucide-react";
 
@@ -47,7 +46,9 @@ export default function CertificationsSection() {
     }
   };
 
-  const getStatusBadgeVariant = (status: string) => {
+  const getStatusBadgeVariant = (
+    status: string
+  ): "default" | "secondary" | "outline" => {
     switch (status) {
       case "completed":
         return "default";
@@ -125,9 +126,9 @@ export default function CertificationsSection() {
                             {getIssuerIcon(certification.issuer)}
                           </div>
                           <Badge
-                            variant={
-                              getStatusBadgeVariant(certification.status) as any
-                            }
+                            variant={getStatusBadgeVariant(
+                              certification.status
+                            )}
                             className="capitalize"
                           >
                             {certification.status === "scheduled"

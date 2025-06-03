@@ -2,7 +2,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
 import { education } from "@/lib/data";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
