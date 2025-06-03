@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Download } from "lucide-react";
 import { personalData } from "@/lib/data";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const navigation = [
   { name: "About", href: "#about" },
@@ -73,8 +74,9 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Download CV Button */}
-          <div className="hidden md:flex">
+          {/* Desktop Actions */}
+          <div className="hidden md:flex items-center space-x-4">
+            <ModeToggle />
             <Button
               variant="outline"
               size="sm"
@@ -90,7 +92,8 @@ export default function Header() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            <ModeToggle />
             <Button
               variant="ghost"
               size="sm"
